@@ -1,0 +1,44 @@
+h2 {
+  color: #ff4444;
+  font-weight: 600;
+  font-size: 35px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.nav-list {
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.btn {
+  outline: none;
+  color: #f5f5f5;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background: #454545;
+}
+
+.btn:hover { background: #252525; }
+
+p {
+  color: #252525;
+  font-weight: 600;
+  font-family: courier, Helvetica, sans-serif;
+}
+
+.media-galleries { background-color: #f0f0f0; }
+
+.qtr-scr {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.qtr-scr div { background-color: #ccc; }
+
+.qtr-scr:hover { 
+  transform: scale(1.025); 
+  transition: all .1s;
+}
+
+.filter-tabs div.flex-box { min-height: 307px; }
