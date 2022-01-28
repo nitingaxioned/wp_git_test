@@ -42,3 +42,6 @@ p {
 }
 
 .filter-tabs div.flex-box { min-height: 307px; }
+
+li a:hover { color: #454545 }
+li a { color: #252525 }
