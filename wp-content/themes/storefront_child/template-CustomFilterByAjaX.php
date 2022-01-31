@@ -46,6 +46,7 @@ get_footer();
 <script>
 	let pg=1;
 	let id=<?php echo $temp[0]; ?>;
+	let ppg=<?php echo get_field('post_per_click'); ?>;
 	jQuery('.load_more').hide();
 	jQuery('.cat').on('change',function() {
 		pg = 1;
@@ -55,13 +56,14 @@ get_footer();
 
 	function callAjax(id) {
 		jQuery('.load_more').hide();
-		(pg == 1) && jQuery('.filter-box').html("<p>Loading....</p>");
+		(pg == 1) && jQuery('.filter-box').html("<p>Loading..."+ppg+"</p>");
 		(pg != 1) && jQuery('.filter-box').append("<p>Loading....</p>");
 		let wp_url = "<?php echo admin_url('admin-ajax.php'); ?>";
 		let filter_data = new FormData;
 		filter_data.append('action','filter');
 		filter_data.append('id',id);
 		filter_data.append('pg',pg);
+		filter_data.append('ppg',ppg);
 		jQuery.ajax({
 			url : wp_url,
 			data : filter_data,

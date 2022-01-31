@@ -23,7 +23,7 @@ function filter_ajax(){
 	$cat_id = $_REQUEST['id'];
 	$pg = $_REQUEST['pg'];
     $queryArr = array(
-		'posts_per_page' => 3,
+		'posts_per_page' => $_REQUEST['ppg'],
 		'post_type' => 'product',
 		'tax_query' => array(
 		  array(
@@ -89,6 +89,6 @@ function haveMore($queryArr, $pg){
     $queryArr['posts_per_page'] = -1;
     $res = new wp_Query($queryArr);
     $noOfPost = $res->found_posts;
-    $expg = ceil($noOfPost/3);
+    $expg = ceil($noOfPost/$_REQUEST['ppg']);
     ($pg == $expg) ? hideLoadBtn() : showLoadBtn();
 }
