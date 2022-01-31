@@ -25,23 +25,3 @@ p {
   font-weight: 600;
   font-family: courier, Helvetica, sans-serif;
 }
-
-.media-galleries { background-color: #f0f0f0; }
-
-.qtr-scr {
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: #ccc;
-}
-
-.qtr-scr div { background-color: #ccc; }
-
-.qtr-scr:hover { 
-  transform: scale(1.025); 
-  transition: all .1s;
-}
-
-.filter-tabs div.flex-box { min-height: 307px; }
-
-li a:hover { color: #454545 }
-li a { color: #252525 }
